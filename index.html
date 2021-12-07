@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
 
-  Samuel Green
-  Available to Walk
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  That sounds great. I’d be happy with that.
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main id="grid-container">
+      <div id="left-background"></div>
+      <section id="left-container" class="container">
+        <div id="phone">
+          <div id="phone-content">
+            <div>
+              <h1>Samuel Green</h1>
+              <p>Available to Walk</p>
+            </div>
+            <p>That sounds great. I’d be happy with that.</p>
 
-  Could you send over some pictures of your dog, please?
+            <p>Could you send over some pictures of your dog, please?</p>
+            <div id="images">
+              <img />
+              <img />
+              <img />
+            </div>
+            <p>Here are a few pictures. She’s a happy girl!</p>
+            <p>Can you make it?</p>
 
-  Here are a few pictures. She’s a happy girl!
+            <p>
+              She looks so happy! The time we discussed works. How long shall I
+              take her out for?
+            </p>
 
-  Can you make it?
+            <button>30 minute walk $29</button>
+            <button>1 hour walk $49</button>
+            <div id="message">Type a message…</div>
+          </div>
+        </div>
+      </section>
 
-  She looks so happy! The time we discussed works. How long shall I take her out for?
+      <section id="right-container" class="container">
+        <h1>Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </section>
 
-  30 minute walk
-  $29
-
-  1 hour walk
-  $49
-
-  Type a message…
-
-  Simple booking
-
-  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
-  discuss arrangements and make bookings. Once the walk has been completed you can rate 
-  your walker and book again all through the chat.
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </main>
+  </body>
 </html>
