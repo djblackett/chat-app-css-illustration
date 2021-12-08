@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -13,7 +18,10 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Frontend Mentor | [Challenge Name Here]</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -33,36 +41,61 @@
       <section id="left-container" class="container">
         <div id="phone">
           <div id="phone-content">
-            <div>
-              <h1>Samuel Green</h1>
-              <p>Available to Walk</p>
+            <div id="contact">
+              <i id="back-button">&lt;</i>
+              <div id="pic-name">
+                <img
+                  id="avatar"
+                  src="./images/avatar.jpg"
+                  alt="avatar picture"
+                />
+                <div id="info">
+                  <p id="name">Samuel Green</p>
+                  <p id="availability">Available to Walk</p>
+                </div>
+              </div>
+              <i class="fa fa-ellipsis-v"></i>
             </div>
-            <p>That sounds great. I’d be happy with that.</p>
+            <p class="left-message">
+              That sounds great. I’d be happy with that.
+            </p>
 
-            <p>Could you send over some pictures of your dog, please?</p>
+            <p class="left-message">
+              Could you send over some pictures of your dog, please?
+            </p>
             <div id="images">
-              <img />
-              <img />
-              <img />
+              <img class="dog-image" src="./images/dog-image-1.jpg" />
+              <img class="dog-image" src="./images/dog-image-2.jpg" />
+              <img class="dog-image" src="./images/dog-image-3.jpg" />
             </div>
-            <p>Here are a few pictures. She’s a happy girl!</p>
-            <p>Can you make it?</p>
+            <p class="right-message">
+              Here are a few pictures. She’s a happy girl!
+            </p>
+            <p class="right-message">Can you make it?</p>
 
-            <p>
+            <p class="left-message">
               She looks so happy! The time we discussed works. How long shall I
               take her out for?
             </p>
 
-            <button>30 minute walk $29</button>
-            <button>1 hour walk $49</button>
+            <div class="payment-button">
+              <div class="white-circle"></div>
+              <p>30 minute walk</p>
+              <p class="money">$29</p>
+            </div>
+            <div class="payment-button">
+              <div class="white-circle"></div>
+              <p>1 hour walk</p>
+              <p class="money">$49</p>
+            </div>
             <div id="message">Type a message…</div>
           </div>
         </div>
       </section>
 
       <section id="right-container" class="container">
-        <h1>Simple booking</h1>
-        <p>
+        <p id="booking-title">Simple booking</p>
+        <p id="dog-walker-text">
           Stay in touch with our dog walkers through the chat interface. This
           makes it easy to discuss arrangements and make bookings. Once the walk
           has been completed you can rate your walker and book again all through
