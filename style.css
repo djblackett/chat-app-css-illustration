@@ -2,14 +2,19 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 main {
   margin: 0;
   display: grid;
-  grid-template: 1fr / 45% 1fr;
+  grid-template: 1fr / 60% 1fr;
   height: 100vh;
+  width: 100vw;
   background-color: hsl(270, 20%, 96%);
+  overflow: hidden;
+  /* justify-content: center; */
 }
 
 p {
@@ -28,9 +33,11 @@ p {
 }
 
 #right-container {
-  width: 66%;
+  width: 75%;
   /* justify-self: center; */
   text-align: center;
+  margin-left: -150px;
+  justify-self: flex-start;
 }
 
 #left-background {
@@ -43,13 +50,34 @@ p {
   background-position: left top;
   /* background-size: 55% 80%; */
   height: 80%;
-  width: 30%;
+  width: 35%;
   border-radius: 0 0 50% 50%;
   background-repeat: no-repeat;
   margin-left: -5%;
 }
 
+#right-background {
+  position: absolute;
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
+  background-position: right bottom;
+  /* background-size: 55% 80%; */
+  height: 90%;
+  width: 50%;
+  border-radius: 50% 50% 0 0;
+  background-repeat: no-repeat;
+  margin-right: -20%;
+  align-self: flex-end;
+  justify-self: flex-end;
+  opacity: 0.05;
+}
+
 #phone {
+  display: flex;
+  margin-right: -100px;
   width: 30%;
   min-width: 320px;
   height: 65%;
@@ -62,6 +90,8 @@ p {
   border: 10px solid white;
   border-radius: 25px;
   box-shadow: 1px 1px 5px 1px grey;
+  /* transform: translateX(50px); */
+  transform: scale(0.8, 0.8);
 }
 
 #phone-content {
@@ -70,6 +100,16 @@ p {
   /* justify-content: flex-start; */
   align-items: flex-start;
   width: 100%;
+}
+
+#top-notch {
+  height: 25px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  border-radius: 0 0 12px 12px;
 }
 
 #contact {
@@ -91,7 +131,7 @@ p {
   margin-bottom: 15px;
   /* padding: 5px; */
   border-radius: 16px 16px 8px 8px;
-  box-shadow: 0px 1px 5px 1px grey;
+  /* box-shadow: 0px 1px 5px 1px grey; */
 }
 
 #avatar {
@@ -105,13 +145,14 @@ p {
 #back-button {
   color: white;
   font-size: 16;
+  transform: translateY(10px);
 }
 
 #pic-name {
   display: flex;
   flex-direction: row;
   /* margin-right: 20px; */
-  transform: translateX(-40px);
+  transform: translate(-40px, 10px);
 }
 
 #name {
@@ -128,11 +169,13 @@ p {
 
 #availability {
   margin: 0;
-  font-size: 8;
+  font-size: 6;
+  font-weight: 400;
 }
 
 #menu {
   justify-self: flex-end;
+  transform: translateY(10px);
 }
 
 #images {
@@ -154,8 +197,9 @@ p {
 .left-message {
   width: 50%;
   color: hsl(276, 55%, 52%);
-  border-radius: 16px 16px 16px 0px;
-  background-color: hsl(206, 6%, 79%);
+  border-radius: 12px 12px 12px 0px;
+  background-color: rgba(71, 0, 179, 0.05);
+  /* opacity: 0.05; */
   font-size: 12px;
   padding: 5px;
   margin: 5px 10px;
@@ -163,11 +207,12 @@ p {
 }
 
 .right-message {
+  width: 50%;
   color: hsl(271, 15%, 43%);
   align-self: flex-end;
   font-size: 12px;
   background-color: white;
-  border-radius: 16px 16px 0px 16px;
+  border-radius: 12px 12px 0px 12px;
   padding: 5px;
   box-shadow: 1px 1px 5px 1px grey;
   margin: 5px 10px;
@@ -175,6 +220,7 @@ p {
 
 .payment-button {
   display: flex;
+  height: 4em;
   flex-direction: row;
   background-image: linear-gradient(
     to right,
@@ -182,13 +228,14 @@ p {
     hsl(293, 100%, 63%)
   );
   margin: 5px 10px;
-  border-radius: 16px 16px 16px 0px;
+  border-radius: 12px 12px 12px 0px;
   /* padding: 5px; */
-  width: 80%;
+  width: 70%;
   align-items: center;
   justify-content: space-between;
   color: hsl(289, 100%, 72%);
   box-shadow: 1px 1px 5px 1px grey;
+  font-size: 8;
 }
 
 .white-circle {
@@ -207,6 +254,10 @@ p {
 }
 
 #message {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: rgb(255, 255, 255);
   color: hsl(206, 6%, 79%);
   border-radius: 16px;
@@ -227,6 +278,7 @@ textarea {
 i {
   color: white;
   margin: 20px;
+  transform: translateY(10px);
 }
 
 button {
@@ -235,6 +287,18 @@ button {
     hsl(264, 100%, 61%),
     hsl(293, 100%, 63%)
   );
+}
+
+#send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: hsl(271, 36%, 24%);
+  color: white;
+  text-align: center;
 }
 
 #booking-title {
@@ -257,5 +321,11 @@ button {
   }
 
   #right-container {
+    justify-self: center;
+  }
+
+  #left-background {
+    position: absolute;
+    background-size: 100% 100%;
   }
 }
