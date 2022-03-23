@@ -49,6 +49,7 @@ p {
   /* justify-self: center; */
   text-align: center;
   width: 100%;
+  z-index: 1;
 }
 
 #left-background {
@@ -60,7 +61,7 @@ p {
   );
   background-position: left top;
   /* background-size: 55% 80%; */
-  height: 80vh;
+  height: 50vh;
   width: 100%;
   top: 0;
   left: -50%;
@@ -80,7 +81,7 @@ p {
   background-position: right bottom;
   /* background-size: 55% 80%; */
   width: 100%;
-  top: 80vh;
+  top: 50vh;
   bottom: 0;
   right: -50%;
   border-radius: 50% 50% 0 0;
@@ -183,7 +184,7 @@ p {
   margin: 0;
   font-size: 14;
   color: white;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 #info {
@@ -312,6 +313,13 @@ i {
   color: white;
   margin: 20px;
   transform: translateY(10px);
+}
+
+.time-paragraph {
+  color: white;
+  font-weight: 200;
+  font-size: 0.8rem;
+  opacity: 0.5;
 }
 
 button {
